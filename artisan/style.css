@@ -1,0 +1,113 @@
+.data input {
+  color: orange;
+}
+.data button {
+  font-weight: bold;
+}
+.form .sign-up-area .left button {
+  font-weight: bold;
+}
+.other-container {
+  width: 50px;
+  height: 50px;
+  background-color: #9b59b6;
+  box-shadow: 1px 1px 3px #2c3e50;
+  border-radius: 4px;
+  margin-top: 1vmax;
+}
+:root {
+  --primary-color: #ecf0f1;
+}
+.results {
+  padding: 1vmax;
+  color: var(--primary-color);
+}
+input {
+  color: var(--primary-color);
+  border-bottom: 0.5px solid var(--primary-color);
+  font-size: 1em;
+}
+::placeholder {
+  color: var(--primary-color);
+}
+.fa-search {
+  color: var(--primary-color);
+  padding-left: 5vmax;
+}
+@keyframes slide-from-bottom {
+  from {
+    margin-top: -10%;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+@keyframes slide-from-left {
+  from {
+    margin-left: -10%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+.logo {
+  /* Pretty Design Stuff - not related to animation */
+  position: fixed;
+  margin-top: 0%;
+  background-color: #27ae60;
+  display: inline-block;
+  padding: 1vmax;
+  color: #f1c40f;
+  font-weight: bold;
+  font-family: Trebuchet MS;
+  font-size: 3vmax;
+  border-radius: 5px;
+  /* Animation Stuff */
+  animation-name: slide-from-bottom;
+  animation-duration: 2s;
+}
+.catchline {
+  position: fixed;
+  margin-top: 110px;
+  font-family: Trebuchet MS;
+  color: #2c3e50;
+  font-weight: bold;
+  animation-name: slide-from-left;
+  animation-duration: 2s;
+}
+@keyframes morph {
+  25% {
+    background-color: #e74c3c;
+  }
+  50% {
+    background-color: #27ae60;
+  }
+  75% {
+    background-color: #2980b9;
+  }
+  100% {
+    background-color: #f1c40f;
+    margin-left: 200px;
+  }
+}
+.loader {
+  width: 220px;
+  background-color: #2c3e50;
+  padding: 1vmin;
+  border-radius: 4px;
+}
+.ball {
+  width: 20px;
+  height: 20px;
+  background-color: #9b59b6;
+  border-radius: 50%;
+  /*Normal Animation commands*/
+  animation-name: morph;
+  animation-duration: 2s;
+  /*iteration-count tells it how many times to repeat*/
+  animation-iteration-count: infinite;
+  /*direction is for which way to go (we use alternate to go back and forth)*/
+  animation-direction: alternate;
+  /*How the animation should "ease" in/out*/
+  animation-timing-function: linear;
+}
